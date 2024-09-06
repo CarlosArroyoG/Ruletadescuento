@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
+    padding: 0 15px; /* Añadir un pequeño padding lateral para pantallas más pequeñas */
 }
 
 h1 {
@@ -74,5 +75,65 @@ h1 {
 #couponMessage {
     margin-top: 20px;
     font-size: 20px;
+}
+
+/* Media queries para pantallas más pequeñas */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px; /* Reducir el tamaño del título en pantallas más pequeñas */
+    }
+
+    .wheel {
+        width: 250px;
+        height: 250px; /* Reducir el tamaño de la ruleta */
+    }
+
+    .section {
+        font-size: 18px;
+        line-height: 125px; /* Ajustar el tamaño del texto dentro de la ruleta */
+    }
+
+    #spinButton {
+        padding: 8px 16px; /* Hacer el botón más pequeño */
+        font-size: 16px;
+    }
+
+    #result {
+        font-size: 20px; /* Reducir el tamaño del texto del resultado */
+    }
+
+    #couponMessage {
+        font-size: 18px; /* Ajustar el tamaño del mensaje */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Título más pequeño para pantallas móviles */
+    }
+
+    .wheel {
+        width: 200px;
+        height: 200px; /* Reducir la ruleta aún más para pantallas pequeñas */
+    }
+
+    .section {
+        font-size: 16px;
+        line-height: 100px; /* Ajustar el texto dentro de la ruleta */
+    }
+
+    #spinButton {
+        padding: 6px 12px; /* Botón más pequeño */
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+
+    #couponMessage {
+        font-size: 16px;
+    }
 }
 
