@@ -4,6 +4,13 @@ body {
     background-color: #f0f0f0;
 }
 
+h1 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .wheel-container {
     display: inline-block;
     margin-top: 50px;
@@ -19,18 +26,19 @@ body {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     transform: rotate(0deg);
     transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+    background-color: #007bff; /* Color azul para la ruleta */
 }
 
 .section {
     width: 50%;
     height: 50%;
-    background-color: #FF6243;
+    background-color: transparent;
     position: absolute;
     transform-origin: 100% 100%;
     text-align: center;
     line-height: 150px;
     font-size: 20px;
-    color: white;
+    color: white; /* Números blancos */
     font-weight: bold;
 }
 
@@ -42,10 +50,10 @@ body {
 .section:nth-child(6) { transform: rotate(300deg); }
 
 #spinButton {
-    margin-top: 20px;
+    margin-top: 50px; /* Aumenta el margen superior */
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #FF6243;
+    background-color: #FF0000; /* Botón rojo */
     color: white;
     border: none;
     cursor: pointer;
@@ -54,7 +62,7 @@ body {
 }
 
 #spinButton:hover {
-    background-color: #28292E;
+    background-color: #cc0000; /* Hover más oscuro */
 }
 
 #result {
@@ -77,7 +85,7 @@ body {
 #couponForm button {
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #FF6243;
+    background-color: #FF0000; /* Botón rojo */
     color: white;
     border: none;
     cursor: pointer;
@@ -86,7 +94,7 @@ body {
 }
 
 #couponForm button:hover {
-    background-color: #28292E;
+    background-color: #cc0000; /* Hover más oscuro */
 }
 
 #formMessage {
