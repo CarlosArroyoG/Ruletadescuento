@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Descuentos</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wheel-container">
+        <div class="wheel" id="wheel">
+            <div class="section">5%</div>
+            <div class="section">10%</div>
+            <div class="section">15%</div>
+            <div class="section">20%</div>
+            <div class="section">5%</div>
+            <div class="section">10%</div>
+        </div>
+        <button id="spinButton">Girar Ruleta</button>
+        <div id="result"></div>
+        
+        <!-- Formulario que aparecerá al finalizar la ruleta -->
+        <div id="couponForm" style="display: none;">
+            <h2>¡Felicidades! Llena el formulario para hacer válido tu cupón:</h2>
+            <form id="form" onsubmit="submitForm(event)">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <button type="submit">Validar Cupón</button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
 
