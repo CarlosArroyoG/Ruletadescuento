@@ -29,7 +29,7 @@ function submitForm(event) {
     const phone = document.getElementById('phone').value;
 
     // URL de Google Apps Script (cambia esta URL por la tuya)
-    const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxLpPh7iAf7LpsNmbl9FB8Yh1zg1bJ7xWRsqO1U05dHAVxn9C_JLNHUyZa1P5gdMJRioA/exec';
 
     // Enviar datos a Google Sheets
     fetch(scriptURL, {
