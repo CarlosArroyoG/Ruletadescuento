@@ -28,9 +28,24 @@ function submitForm(event) {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
-    // Mostrar mensaje de confirmación
-    formMessage.textContent = `Gracias, ${name}. Tu cupón ha sido validado. Te contactaremos al ${phone}.`;
-    
-    // Ocultar el formulario después del envío
-    couponForm.style.display = "none";
+    // URL de Google Apps Script (cambia esta URL por la tuya)
+    const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+
+    // Enviar datos a Google Sheets
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, phone: phone })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            formMessage.textContent = `Gracias, ${name}. Tu cupón ha sido validado. Te contactaremos al ${phone}.`;
+            couponForm.style.display = "none"; // Ocultar el formulario después de enviarlo
+        } else {
+            formMessage.textContent = 'Error al enviar el formulario. Inténtalo de nuevo.';
+        }
+    })
+    .catch(error => console.error('Error!', error.message));
 }
+
