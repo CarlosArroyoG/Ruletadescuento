@@ -21,19 +21,10 @@
         <button id="spinButton">Girar Ruleta</button>
         <div id="result"></div>
         
-        <!-- Formulario que aparecerá al finalizar la ruleta -->
-        <div id="couponForm" style="display: none;">
-            <h2>¡Felicidades! Llena el formulario para hacer válido tu cupón:</h2>
-            <form id="form">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" name="phone" required><br><br>
-
-                <button type="submit">Validar Cupón</button>
-            </form>
-            <div id="formMessage"></div>
+        <!-- Texto que aparecerá después de girar la ruleta -->
+        <div id="couponMessage" style="display: none;">
+            <h2>¡Felicidades! Has ganado un <span id="discount"></span> de descuento.</h2>
+            <p>Agrega tus datos en la tienda para validar tu cupón.</p>
         </div>
     </div>
 
